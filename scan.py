@@ -1,5 +1,8 @@
 import requests, os, socket, colorama, urllib3; from colorama import Fore; from bs4 import BeautifulSoup
 
+
+
+
 def domain_search():
 
     query = input(">$ Enter domain: ")
@@ -60,7 +63,7 @@ def port_scan():
 
     try:
         
-        for port in range (1, 65535):
+        for port in range (1, 65536):
             s = socket.socket()
             result = s.connect_ex((h, port))
 
